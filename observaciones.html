@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>Naming Nexus Konta y Factum</title>
+<title>Factum y Konta Expense</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -55,6 +55,14 @@ mark{background:var(--marker);color:var(--marker-ink);border-radius:3px;padding:
 .changes .arrow{color:var(--muted)}
 .why{margin:0;color:var(--muted);font-size:14px;max-width:72ch}
 .why b{color:var(--ink)}
+.n.m{background:var(--sky)}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.pillars div{border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+.pillars b{display:block;font-family:var(--f-display);color:var(--navy);margin-bottom:4px}
+.pillars p{margin:0;color:var(--muted);font-size:14px}
+.core{font:600 clamp(20px,3.4vw,28px)/1.25 var(--f-display);color:var(--navy);margin:8px 0 0;text-wrap:balance}
+.dont{display:grid;gap:6px;margin:12px 0 0;padding-left:20px;color:var(--muted)}
+h3{font-size:16px;font-weight:600;margin-top:18px}
 .open{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
 .open ol{margin:12px 0 0;padding-left:20px;display:grid;gap:8px;color:var(--muted)}
 .open ol b{color:var(--ink)}
@@ -64,113 +72,67 @@ code{font-family:var(--f-mono);font-size:13px}
 </head>
 <body>
 <div class="wrap">
-
   <section>
-    <p class="eyebrow">Revisión de naming · web SeidorApps (QAS)</p>
-    <h1>Nexus Konta y Nexus Factum aplicados a la web, sección por sección</h1>
-    <p class="lead">SeidorApps sigue siendo la marca de la suite; solo cambian los nombres de los dos portales. Cada observación lleva el mismo número que el badge rosado de la maqueta: ubica el número allí y revisa aquí el cambio y su motivo.</p>
+    <p class="eyebrow">Revisión de naming y mensaje · web SeidorApps (QAS)</p>
+    <h1>Factum y Konta Expense en la web, sección por sección</h1>
+    <p class="lead">SeidorApps sigue siendo la suite. Los badges <span class="n">rosados</span> marcan cambios de nombre y los <span class="n m">azules</span>, cambios de mensaje. Cada número coincide con el de la maqueta.</p>
     <div class="links"><a href="index.html">Abrir la maqueta in situ</a><a href="https://qas.seidorapps.ai/es" target="_blank" rel="noopener">Ver la web original (QAS)</a></div>
   </section>
 
-  <section class="brand" aria-label="Arquitectura de marca propuesta">
-    <div><span>Suite (sin cambios)</span><b>SeidorApps</b><span>Marca paraguas de todos los portales</span></div>
-    <div><span>Portal de Rendiciones</span><b>Nexus Konta</b><span>ER, fondo fijo y liquidación</span></div>
-    <div><span>Portal de Proveedores</span><b>Nexus Factum</b><span>Facturas, SUNAT y MIRO</span></div>
-  </section>
-
-  <div class="legend"><span class="n">3</span> número de observación <mark>Nexus Konta</mark> texto cambiado en la maqueta <span class="tag">Por decidir</span> requiere decisión fuera del naming</div>
-
-  <section class="list" aria-label="Observaciones por sección">
-
-    <article class="obs">
-      <header><span class="n">1</span><h2>Buscadores</h2><span class="where">meta description</span></header>
-      <ul class="changes">
-        <li><span class="from">Rendiciones y Proveedores sobre una sola plataforma…</span><span class="arrow">→</span><span><mark>Nexus Konta (Rendiciones) y Nexus Factum (Proveedores)</mark> sobre una sola plataforma…</span></li>
-      </ul>
-      <p class="why"><b>Motivo:</b> es el texto que muestra Google bajo el título. Se dejan "Rendiciones" y "Proveedores" entre paréntesis porque son las palabras que la gente busca; los nombres nuevos aún no tienen búsquedas. El título de la pestaña ("SeidorApps — Suite SaaS…") no cambia. Sin badge en la maqueta porque no es texto visible.</p>
-    </article>
-
-    <article class="obs">
-      <header><span class="n">2</span><h2>Portada (hero)</h2><span class="where">#inicio · bajada</span></header>
-      <ul class="changes">
-        <li><span class="from">Rendiciones y Proveedores comparten una sola plataforma</span><span class="arrow">→</span><span><mark>Nexus Konta y Nexus Factum</mark> comparten una sola plataforma</span></li>
-      </ul>
-      <p class="why"><b>Motivo:</b> es la primera mención de los portales en la página; el visitante tiene que leer sus nombres en los primeros segundos. El titular y la etiqueta "SUITE SAAS" no se tocan porque hablan de la suite SeidorApps.</p>
-    </article>
-
-    <article class="obs">
-      <header><span class="n">3</span><h2>Ilustración de la plataforma</h2><span class="where">#inicio · bloque 3D y selector</span><span class="tag">Por decidir</span></header>
-      <ul class="changes">
-        <li><span class="from">R · Rendiciones / P · Proveedores</span><span class="arrow">→</span><span>K · <mark>Nexus Konta</mark> / F · <mark>Nexus Factum</mark></span></li>
-        <li><span class="from">Selector: Rendiciones | Proveedores</span><span class="arrow">→</span><span>Selector: Konta | Factum</span></li>
-        <li><span class="from">Rendiciones usa identidad, lectura con IA…</span><span class="arrow">→</span><span><mark>Nexus Konta</mark> usa identidad, lectura con IA…</span></li>
-        <li><span class="from">tuempresa.rendiciones.seidorapps.ai</span><span class="arrow">→</span><span>tuempresa.<mark>konta</mark>.seidorapps.ai</span></li>
-      </ul>
-      <p class="why"><b>Motivo:</b> las iniciales de los íconos (R, P) tienen que coincidir con el nombre nuevo (K, F) o el bloque pierde sentido. En el selector se usa la forma corta porque el espacio es chico. "Plataforma SeidorApps incluida" se mantiene. <b>Por decidir:</b> el subdominio es un cambio técnico (DNS, certificados, URLs de clientes vigentes); se muestra como propuesta, no como cambio de texto.</p>
-    </article>
-
-    <article class="obs">
-      <header><span class="n">4</span><h2>Recorrido de la factura</h2><span class="where">#como-funciona · paso 1, canales de entrada</span></header>
-      <ul class="changes"><li><span class="from">Portal del proveedor</span><span class="arrow">→</span><span><mark>Nexus Factum</mark> (portal del proveedor)</span></li></ul>
-      <p class="why"><b>Motivo:</b> es el único punto del recorrido donde aparece un portal. Nombrarlo ahí conecta el flujo con el producto que se vende; la descripción queda entre paréntesis para no perder claridad. "Con SeidorApps pasan solos" se mantiene.</p>
-    </article>
-
-    <article class="obs">
-      <header><span class="n">5</span><h2>Sección Productos</h2><span class="where">#productos · pestañas, fichas, botones</span><span class="tag">Por decidir</span></header>
-      <ul class="changes">
-        <li><span class="from">Pestañas: Rendiciones | Proveedores</span><span class="arrow">→</span><span><mark>Nexus Konta</mark> | <mark>Nexus Factum</mark></span></li>
-        <li><span class="from">R · Portal de Rendiciones</span><span class="arrow">→</span><span>K · <mark>Nexus Konta</mark> · Portal de Rendiciones</span></li>
-        <li><span class="from">P · Portal de Proveedores</span><span class="arrow">→</span><span>F · <mark>Nexus Factum</mark> · Portal de Proveedores</span></li>
-        <li><span class="from">Ver Rendiciones / Proveedores en una demo</span><span class="arrow">→</span><span>Ver <mark>Nexus Konta</mark> / <mark>Nexus Factum</mark> en una demo</span></li>
-        <li><span class="from">demo.proveedores.seidorapps.ai</span><span class="arrow">→</span><span>demo.<mark>factum</mark>.seidorapps.ai</span></li>
-      </ul>
-      <p class="why"><b>Motivo:</b> es la sección donde cada portal se presenta, así que el nombre va como título y la descripción ("Portal de Rendiciones") queda como apoyo. Los botones de demo piden el portal por su nombre para que el lead llegue ya identificado. <b>Por decidir:</b> el subdominio de demo, igual que en la observación 3.</p>
-    </article>
-
-    <article class="obs">
-      <header><span class="n">6</span><h2>Inteligencia artificial</h2><span class="where">#ia · bajada y métrica "27 operaciones"</span></header>
-      <ul class="changes">
-        <li><span class="from">El mismo motor que usan Rendiciones y Proveedores</span><span class="arrow">→</span><span>…que usan <mark>Nexus Konta y Nexus Factum</mark></span></li>
-        <li><span class="from">Integración Proveedores–SAP</span><span class="arrow">→</span><span>Integración <mark>Nexus Factum</mark>–SAP</span></li>
-      </ul>
-      <p class="why"><b>Motivo:</b> refuerza que la lectura con IA es una capacidad compartida de SeidorApps. Se mantienen "Leer documento con IA" y "Lectura con IA" porque son funciones; la regla de no usar "IA" aplica a los nombres de los portales, no a la descripción de funciones.</p>
-    </article>
-
-    <article class="obs">
-      <header><span class="n">7</span><h2>Hecho para empresas</h2><span class="where">#seguridad · tarjeta Auditoría</span></header>
-      <ul class="changes"><li><span class="from">…en Rendiciones, Proveedores y la administración</span><span class="arrow">→</span><span>…en <mark>Nexus Konta, Nexus Factum</mark> y la administración</span></li></ul>
-      <p class="why"><b>Motivo:</b> coherencia; cualquier mención de un portal usa su nombre comercial.</p>
-    </article>
-
-    <article class="obs">
-      <header><span class="n">8</span><h2>Formulario de demo</h2><span class="where">#demo · "¿Qué te interesa?"</span></header>
-      <ul class="changes">
-        <li><span class="from">☐ Rendiciones</span><span class="arrow">→</span><span>☐ <mark>Nexus Konta</mark> (Rendiciones)</span></li>
-        <li><span class="from">☐ Proveedores</span><span class="arrow">→</span><span>☐ <mark>Nexus Factum</mark> (Proveedores)</span></li>
-      </ul>
-      <p class="why"><b>Motivo:</b> quien llena el formulario quizá aún no reconoce los nombres nuevos; el paréntesis evita que marque la opción equivocada. Los valores internos del formulario (<code>rend</code>, <code>prov</code>) no cambian, así que el CRM no se ve afectado.</p>
-    </article>
-
-    <article class="obs">
-      <header><span class="n">9</span><h2>Pie de página</h2><span class="where">Footer · línea de productos</span></header>
-      <ul class="changes">
-        <li><span class="from">Rendiciones · Proveedores</span><span class="arrow">→</span><span><mark>Nexus Konta · Nexus Factum</mark></span></li>
-      </ul>
-      <p class="why"><b>Motivo:</b> cierra la página listando los portales con su nombre; el logo "SEIDOR Apps" se mantiene.</p>
-    </article>
+  <section class="brand" aria-label="Arquitectura de marca">
+    <div><span>Suite (sin cambios)</span><b>SeidorApps</b><span>Marca paraguas de los portales</span></div>
+    <div><span>Portal de Proveedores</span><b>Factum</b><span>Facturas de proveedores, SUNAT y MIRO</span></div>
+    <div><span>Portal de Rendiciones</span><b>Konta Expense</b><span>ER, fondo fijo, reembolsos y liquidación</span></div>
   </section>
 
   <section class="open">
-    <h2>Fuera de la maqueta: pendientes para decidir</h2>
-    <ol>
-      <li><b>Prefijo "Nexus".</b> Sin "Seidor Nexus" como suite, "Nexus" queda como apellido común de los portales. Alternativa: usar solo <b>Konta</b> y <b>Factum</b> bajo SeidorApps.</li>
-      <li><b>Subdominios de clientes</b> (observaciones 3 y 5). Cambiarlos afecta DNS, certificados y URLs que los clientes productivos ya usan; puede quedar solo para clientes nuevos.</li>
-      <li><b>Versión en inglés.</b> Los nombres funcionan igual en <code>/en</code>; falta aplicar los mismos cambios allí.</li>
-      <li><b>Marca y dominios.</b> Buscar "Nexus Konta", "Nexus Factum", "Konta" y "Factum" en INDECOPI (clases 9 y 42) antes de publicar.</li>
-      <li><b>Producto.</b> Los nombres también tienen que llegar a los portales (login, correos, plantillas); hoy la web es solo la cara comercial.</li>
-    </ol>
+    <p class="eyebrow">El mensaje</p>
+    <p class="core">Cada comprobante que tu empresa paga, validado y registrado en SAP.</p>
+    <p class="why" style="margin-top:10px">Una empresa paga por dos vías: a sus <b>proveedores</b> (facturas, con o sin orden de compra) y a sus <b>colaboradores</b> (entregas a rendir, fondo fijo, reembolsos). Hoy cada vía corre por separado, con correos, Excel y consultas manuales a SUNAT. Factum y Konta Expense ponen las dos bajo el mismo control y sobre la misma integración con SAP. Ese es el argumento para tener los dos y no solo uno.</p>
+    <div class="pillars">
+      <div><b>Cumplimiento tributario</b><p>Cada comprobante se valida en SUNAT antes de avanzar, con detracciones y retención de IGV aplicadas al registrar. Lo que no es válido no llega a SAP.</p></div>
+      <div><b>Control del gasto</b><p>Aprobaciones con reglas por tipo de documento y topes automáticos (alimentación, hospedaje, movilidad, RMV) antes de que el gasto se apruebe.</p></div>
+      <div><b>Cierre contable sin tipeo</b><p>Facturas registradas con MIRO y rendiciones liquidadas con compensación en SAP. Contabilidad revisa en vez de digitar.</p></div>
+      <div><b>Trazabilidad</b><p>Quién hizo qué, cuándo y desde dónde, en los dos portales y en la administración. Lista para auditoría.</p></div>
+      <div><b>Una sola inversión de integración</b><p>Usuarios, sociedades, datos maestros y conexión con SAP compartidos: el segundo portal se suma sobre lo que ya funciona.</p></div>
+    </div>
+    <h3>Tono</h3>
+    <ul class="dont">
+      <li>Hablarle a <b>Finanzas y Contraloría</b> (control, cumplimiento, cierre), no solo a TI.</li>
+      <li>La IA va como medio ("lee el comprobante"), no como promesa principal.</li>
+      <li>Usar solo cifras que se pueden mostrar en la demo (2,4 s, 9 de 9 campos, 27 operaciones con SAP) y presentarlas como evaluación interna, como ya hace la web.</li>
+      <li>Evitar absolutos como "cero errores" o "100 % automático": el equipo sigue aprobando, y eso es parte del control.</li>
+    </ul>
   </section>
 
+  <section class="list" aria-label="Cambios de mensaje">
+<article class="obs"><header><span class="n m">M1</span><h2>Titular de la portada</h2><span class="where">#inicio · h1</span></header><ul class="changes"><li><span class="from">Una plataforma. Todas tus apps de finanzas y compras, conectadas a SAP.</span><span class="arrow">→</span><span><mark>Cada comprobante que pagas, validado y registrado en SAP.</mark></span></li></ul><p class="why"><b>Motivo:</b> el titular actual describe la plataforma ("todas tus apps"); el nuevo dice el resultado que compra Finanzas. "Comprobante" abarca facturas de proveedores y boletas de colaboradores, así que cubre los dos portales con una sola frase.</p></article>
+<article class="obs"><header><span class="n m">M2</span><h2>Bajada de la portada</h2><span class="where">#inicio · párrafo bajo el titular</span></header><ul class="changes"><li><span class="from">Rendiciones y Proveedores comparten una sola plataforma: un usuario para todas tus empresas, IA que lee comprobantes…</span><span class="arrow">→</span><span><mark>Factum</mark> gestiona las facturas de tus proveedores y <mark>Konta Expense</mark>, los gastos y rendiciones de tus colaboradores. Las dos vías por donde sale el dinero siguen el mismo control…</span></li></ul><p class="why"><b>Motivo:</b> presenta los dos portales con su nombre nuevo y explica en una frase por qué van juntos: cubren las dos vías de pago con el mismo control. Se mantiene el cierre "empiezas con uno y sumas el otro", que reduce la barrera de compra.</p></article>
+<article class="obs"><header><span class="n m">M3</span><h2>Introducción de Productos</h2><span class="where">#productos · título y bajada</span></header><ul class="changes"><li><span class="from">Dos productos, una plataforma y un solo usuario</span><span class="arrow">→</span><span><mark>Proveedores y colaboradores: los dos frentes del gasto, con un mismo control</mark></span></li><li><span class="from">Cada producto tiene su propio portal, pero comparten usuarios…</span><span class="arrow">→</span><span><mark>Factum cubre lo que pagas a proveedores; Konta Expense, lo que adelantas y reembolsas a tus colaboradores…</mark></span></li></ul><p class="why"><b>Motivo:</b> el título actual habla de la arquitectura (usuario, plataforma); el nuevo habla del problema del cliente. La bajada conserva el argumento técnico (integración compartida) como razón para sumar el segundo portal.</p></article>
+<article class="obs"><header><span class="n m">M4</span><h2>Título del bloque de demo</h2><span class="where">#demo · h2</span></header><ul class="changes"><li><span class="from">Trae cinco facturas reales. Las leemos en vivo.</span><span class="arrow">→</span><span><mark>Trae cinco comprobantes reales, facturas o boletas. Los leemos en vivo.</mark></span></li></ul><p class="why"><b>Motivo:</b> "facturas" deja fuera a quien viene por Konta Expense; "comprobantes, facturas o boletas" invita a los dos públicos a la misma demo.</p></article>
+  </section>
+
+  <section class="list" aria-label="Cambios de nombre">
+<article class="obs"><header><span class="n">1</span><h2>Buscadores</h2><span class="where">meta description</span></header><ul class="changes"><li><span class="from">Rendiciones y Proveedores sobre una sola plataforma…</span><span class="arrow">→</span><span><mark>Factum (Proveedores) y Konta Expense (Rendiciones)</mark> sobre una sola plataforma…</span></li></ul><p class="why"><b>Motivo:</b> se dejan "Proveedores" y "Rendiciones" entre paréntesis porque son las palabras que la gente busca; los nombres nuevos aún no tienen búsquedas. El título de la pestaña no cambia. Sin badge en la maqueta porque no es texto visible.</p></article>
+<article class="obs"><header><span class="n">2</span><h2>Ilustración de la plataforma</h2><span class="where">#inicio · bloque 3D y selector</span><span class="tag">Por decidir</span></header><ul class="changes"><li><span class="from">R · Rendiciones / P · Proveedores</span><span class="arrow">→</span><span>K · <mark>Konta Expense</mark> / F · <mark>Factum</mark></span></li><li><span class="from">Selector: Rendiciones | Proveedores</span><span class="arrow">→</span><span>Selector: Konta | Factum</span></li><li><span class="from">tuempresa.rendiciones.seidorapps.ai</span><span class="arrow">→</span><span>tuempresa.<mark>konta</mark>.seidorapps.ai</span></li></ul><p class="why"><b>Motivo:</b> las iniciales de los íconos tienen que coincidir con el nombre (K, F). En el selector va la forma corta por espacio. <b>Por decidir:</b> el subdominio es un cambio técnico (DNS, certificados, URLs de clientes vigentes).</p></article>
+<article class="obs"><header><span class="n">3</span><h2>Recorrido de la factura</h2><span class="where">#como-funciona · canales de entrada</span></header><ul class="changes"><li><span class="from">Portal del proveedor</span><span class="arrow">→</span><span><mark>Factum</mark> (portal del proveedor)</span></li></ul><p class="why"><b>Motivo:</b> único punto del recorrido donde aparece un portal; nombrarlo conecta el flujo con el producto que se vende.</p></article>
+<article class="obs"><header><span class="n">4</span><h2>Sección Productos</h2><span class="where">#productos · pestañas, fichas, botones</span><span class="tag">Por decidir</span></header><ul class="changes"><li><span class="from">Pestañas: Rendiciones | Proveedores</span><span class="arrow">→</span><span><mark>Konta Expense</mark> | <mark>Factum</mark></span></li><li><span class="from">R · Portal de Rendiciones</span><span class="arrow">→</span><span>K · <mark>Konta Expense</mark> · Portal de Rendiciones</span></li><li><span class="from">P · Portal de Proveedores</span><span class="arrow">→</span><span>F · <mark>Factum</mark> · Portal de Proveedores</span></li><li><span class="from">Ver Rendiciones / Proveedores en una demo</span><span class="arrow">→</span><span>Ver <mark>Konta Expense</mark> / <mark>Factum</mark> en una demo</span></li><li><span class="from">demo.proveedores.seidorapps.ai</span><span class="arrow">→</span><span>demo.<mark>factum</mark>.seidorapps.ai</span></li></ul><p class="why"><b>Motivo:</b> el nombre va como título y la descripción queda de apoyo. Los botones de demo piden el portal por su nombre para que el lead llegue identificado. <b>Por decidir:</b> subdominio de demo.</p></article>
+<article class="obs"><header><span class="n">5</span><h2>Inteligencia artificial</h2><span class="where">#ia · bajada y métrica</span></header><ul class="changes"><li><span class="from">El mismo motor que usan Rendiciones y Proveedores</span><span class="arrow">→</span><span>…que usan <mark>Factum y Konta Expense</mark></span></li><li><span class="from">Integración Proveedores–SAP</span><span class="arrow">→</span><span>Integración <mark>Factum</mark>–SAP</span></li></ul><p class="why"><b>Motivo:</b> refuerza que la lectura es una capacidad compartida de SeidorApps. "Lectura con IA" se mantiene porque describe una función, no un nombre.</p></article>
+<article class="obs"><header><span class="n">6</span><h2>Hecho para empresas</h2><span class="where">#seguridad · Auditoría</span></header><ul class="changes"><li><span class="from">…en Rendiciones, Proveedores y la administración</span><span class="arrow">→</span><span>…en <mark>Factum, Konta Expense</mark> y la administración</span></li></ul><p class="why"><b>Motivo:</b> coherencia en cada mención de un portal.</p></article>
+<article class="obs"><header><span class="n">7</span><h2>Formulario de demo</h2><span class="where">#demo · "¿Qué te interesa?"</span></header><ul class="changes"><li><span class="from">☐ Rendiciones</span><span class="arrow">→</span><span>☐ <mark>Konta Expense</mark> (Rendiciones)</span></li><li><span class="from">☐ Proveedores</span><span class="arrow">→</span><span>☐ <mark>Factum</mark> (Proveedores)</span></li></ul><p class="why"><b>Motivo:</b> el paréntesis evita que alguien que aún no reconoce los nombres marque la opción equivocada. Los valores internos (<code>rend</code>, <code>prov</code>) no cambian; el CRM no se ve afectado.</p></article>
+<article class="obs"><header><span class="n">8</span><h2>Pie de página</h2><span class="where">Footer · línea de productos</span></header><ul class="changes"><li><span class="from">Rendiciones · Proveedores</span><span class="arrow">→</span><span><mark>Factum · Konta Expense</mark></span></li></ul><p class="why"><b>Motivo:</b> cierra la página listando los portales con su nombre; el logo "SEIDOR Apps" se mantiene.</p></article>
+  </section>
+
+  <section class="open">
+    <h2>Pendientes para decidir</h2>
+    <ol>
+      <li><b>Forma corta de Konta Expense.</b> En espacios chicos (selector, menús, correos) la maqueta usa "Konta". Confirmar si se acepta como abreviación oficial.</li>
+      <li><b>Subdominios de clientes</b> (observaciones 2 y 4). Cambiarlos afecta DNS, certificados y URLs de clientes productivos; puede quedar solo para clientes nuevos.</li>
+      <li><b>Versión en inglés.</b> Aplicar los mismos nombres y el mismo mensaje en <code>/en</code>.</li>
+      <li><b>Marca.</b> Buscar "Factum" y "Konta Expense" en INDECOPI (clases 9 y 42). "Factum" solo es un término jurídico usado por otros softwares; "SeidorApps Factum" sería más fácil de defender.</li>
+      <li><b>Producto.</b> Llevar los nombres a los portales: login, correos y plantillas.</li>
+    </ol>
+  </section>
 </div>
 </body>
 </html>
