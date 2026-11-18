@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Naming Seidor Nexus</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: hoja de revisión. Cabecera con la arquitectura de marca, luego una fila por sección de la web con antes → después y motivo; el número coincide con el badge de la maqueta. */
+:root{
+  --bg:#f4f6fa; --surface:#ffffff; --ink:#0d1b3d; --muted:#56627a; --line:#dde3ee;
+  --navy:#0b1f4d; --sky:#2f8fe8; --marker:#ffe27a; --marker-ink:#14213d; --badge:#d4005a;
+  --old:#8a93a6; --pending:#b26a00; --pending-bg:#fff4df;
+  --f-display:"Poppins",system-ui,sans-serif; --f-body:"Inter",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#08122b; --surface:#0f1d3d; --ink:#e8eefb; --muted:#a3b0cc; --line:#22335c;
+  --navy:#cfe0ff; --sky:#66b6ff; --marker:#ffe27a; --marker-ink:#14213d; --badge:#ff4f93;
+  --old:#7d89a6; --pending:#ffc266; --pending-bg:#2e2410; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#08122b; --surface:#0f1d3d; --ink:#e8eefb; --muted:#a3b0cc; --line:#22335c;
+  --navy:#cfe0ff; --sky:#66b6ff; --marker:#ffe27a; --marker-ink:#14213d; --badge:#ff4f93;
+  --old:#7d89a6; --pending:#ffc266; --pending-bg:#2e2410; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.wrap{max-width:980px;margin:0 auto;display:grid;gap:32px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;color:var(--navy)}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.1;font-weight:700;letter-spacing:-.02em}
+h2{font-size:20px;font-weight:600}
+.eyebrow{font:600 12px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--sky)}
+.lead{color:var(--muted);max-width:65ch;margin:10px 0 0}
+.brand{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.brand div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0}
+.brand b{display:block;font:600 18px/1.2 var(--f-display);color:var(--navy)}
+.brand span{color:var(--muted);font-size:13px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.links a{font-weight:600;color:var(--sky);text-decoration:none;border-bottom:1px solid currentColor}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);align-items:center}
+.n{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;border-radius:12px;background:var(--badge);color:#fff;font:700 12px/1 var(--f-body);flex:none}
+mark{background:var(--marker);color:var(--marker-ink);border-radius:3px;padding:0 3px}
+.tag{font:600 11px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:6px;background:var(--pending-bg);color:var(--pending)}
+.list{display:grid;gap:14px}
+.obs{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:12px}
+.obs header{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.obs header h2{flex:1;min-width:0}
+.where{font:500 12px/1 var(--f-mono);color:var(--muted)}
+.changes{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.changes li{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:baseline;font-size:14px}
+.changes .from{color:var(--old);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--old) 60%,transparent)}
+.changes .arrow{color:var(--muted)}
+.why{margin:0;color:var(--muted);font-size:14px;max-width:72ch}
+.why b{color:var(--ink)}
+.open{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.open ol{margin:12px 0 0;padding-left:20px;display:grid;gap:8px;color:var(--muted)}
+.open ol b{color:var(--ink)}
+code{font-family:var(--f-mono);font-size:13px}
+@media (max-width:560px){.changes li{grid-template-columns:1fr}.changes .arrow{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section>
+    <p class="eyebrow">Revisión de naming · web SeidorApps (QAS)</p>
+    <h1>Seidor Nexus aplicado a la web, sección por sección</h1>
+    <p class="lead">Cada observación lleva el mismo número que el badge rosado de la maqueta. Abre la maqueta, ubica el número y revisa aquí el cambio y su motivo.</p>
+    <div class="links"><a href="index.html">Abrir la maqueta in situ</a><a href="https://qas.seidorapps.ai/es" target="_blank" rel="noopener">Ver la web original (QAS)</a></div>
+  </section>
+
+  <section class="brand" aria-label="Arquitectura de marca propuesta">
+    <div><span>Suite</span><b>Seidor Nexus</b><span>Reemplaza a "SeidorApps" como nombre visible</span></div>
+    <div><span>Rendiciones</span><b>Nexus Konta</b><span>ER, fondo fijo y liquidación</span></div>
+    <div><span>Proveedores</span><b>Nexus Factum</b><span>Facturas, SUNAT y MIRO</span></div>
+  </section>
+
+  <div class="legend"><span class="n">4</span> número de observación <mark>Nexus Konta</mark> texto cambiado en la maqueta <span class="tag">Por decidir</span> requiere decisión fuera del naming</div>
+
+  <section class="list" aria-label="Observaciones por sección">
+
+    <article class="obs">
+      <header><span class="n">1</span><h2>Pestaña del navegador y buscadores</h2><span class="where">&lt;title&gt; · meta description</span></header>
+      <ul class="changes">
+        <li><span class="from">SeidorApps — Suite SaaS de finanzas…</span><span class="arrow">→</span><span><mark>Seidor Nexus</mark> — Suite SaaS de finanzas…</span></li>
+        <li><span class="from">Rendiciones y Proveedores sobre una sola plataforma…</span><span class="arrow">→</span><span><mark>Nexus Konta (Rendiciones) y Nexus Factum (Proveedores)</mark>…</span></li>
+      </ul>
+      <p class="why"><b>Motivo:</b> es lo primero que ve un prospecto en Google y en la pestaña. Se mantienen "Rendiciones" y "Proveedores" entre paréntesis porque son las palabras que la gente busca; la marca nueva aún no tiene búsquedas. Sin badge en la maqueta porque no es texto visible.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">2</span><h2>Barra de navegación</h2><span class="where">Header · junto al logo</span></header>
+      <ul class="changes"><li><span class="from">SEIDOR Apps</span><span class="arrow">→</span><span>SEIDOR <mark>Nexus</mark></span></li></ul>
+      <p class="why"><b>Motivo:</b> el logo es la firma de la suite. "Apps" describe el formato y no distingue; "Nexus" pasa a ser el nombre propio, y el logo de SEIDOR sigue siendo la marca madre.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">3</span><h2>Portada (hero)</h2><span class="where">#inicio · etiqueta y bajada</span></header>
+      <ul class="changes">
+        <li><span class="from">SUITE SAAS</span><span class="arrow">→</span><span><mark>SEIDOR NEXUS</mark> · SUITE SAAS</span></li>
+        <li><span class="from">Rendiciones y Proveedores comparten una sola plataforma</span><span class="arrow">→</span><span><mark>Nexus Konta y Nexus Factum</mark> comparten una sola plataforma</span></li>
+      </ul>
+      <p class="why"><b>Motivo:</b> el visitante tiene que leer el nombre de la suite y de los dos productos en los primeros segundos. El titular "Una plataforma. Todas tus apps…" no se toca porque ya funciona y no nombra productos.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">4</span><h2>Ilustración de la plataforma</h2><span class="where">#inicio · bloque 3D y selector</span><span class="tag">Por decidir</span></header>
+      <ul class="changes">
+        <li><span class="from">Plataforma SeidorApps incluida</span><span class="arrow">→</span><span>Plataforma <mark>Seidor Nexus</mark> incluida</span></li>
+        <li><span class="from">R · Rendiciones / P · Proveedores</span><span class="arrow">→</span><span>K · <mark>Nexus Konta</mark> / F · <mark>Nexus Factum</mark></span></li>
+        <li><span class="from">Selector: Rendiciones | Proveedores</span><span class="arrow">→</span><span>Selector: Konta | Factum</span></li>
+        <li><span class="from">tuempresa.rendiciones.seidorapps.ai</span><span class="arrow">→</span><span>tuempresa.<mark>konta</mark>.seidorapps.ai</span></li>
+      </ul>
+      <p class="why"><b>Motivo:</b> las iniciales de los íconos (R, P) tienen que coincidir con el nombre nuevo (K, F) o el bloque pierde sentido. En el selector se usa la forma corta porque el espacio es chico. <b>Por decidir:</b> el subdominio es un cambio técnico (DNS, certificados, URLs de clientes vigentes); se muestra como propuesta, no como cambio de texto.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">5</span><h2>"El costo de hacerlo a mano" y "Cómo funciona"</h2><span class="where">Comparativo · bajada del recorrido</span></header>
+      <ul class="changes">
+        <li><span class="from">Con SeidorApps</span><span class="arrow">→</span><span>Con <mark>Seidor Nexus</mark></span></li>
+        <li><span class="from">Con SeidorApps pasan solos…</span><span class="arrow">→</span><span>Con <mark>Seidor Nexus</mark> pasan solos…</span></li>
+      </ul>
+      <p class="why"><b>Motivo:</b> en estos dos textos se habla de la plataforma completa, no de un producto, así que corresponde la marca de suite.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">6</span><h2>Recorrido de la factura</h2><span class="where">#como-funciona · paso 1, canales de entrada</span></header>
+      <ul class="changes"><li><span class="from">Portal del proveedor</span><span class="arrow">→</span><span><mark>Nexus Factum</mark> (portal del proveedor)</span></li></ul>
+      <p class="why"><b>Motivo:</b> es el único punto del recorrido donde aparece un producto. Nombrarlo ahí conecta el flujo con el producto que se vende; se deja la descripción entre paréntesis para no perder claridad.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">7</span><h2>Sección Productos</h2><span class="where">#productos · pestañas, fichas, botones</span><span class="tag">Por decidir</span></header>
+      <ul class="changes">
+        <li><span class="from">Pestañas: Rendiciones | Proveedores</span><span class="arrow">→</span><span><mark>Nexus Konta</mark> | <mark>Nexus Factum</mark></span></li>
+        <li><span class="from">R · Portal de Rendiciones</span><span class="arrow">→</span><span>K · <mark>Nexus Konta</mark> · Portal de Rendiciones</span></li>
+        <li><span class="from">P · Portal de Proveedores</span><span class="arrow">→</span><span>F · <mark>Nexus Factum</mark> · Portal de Proveedores</span></li>
+        <li><span class="from">Ver Rendiciones / Proveedores en una demo</span><span class="arrow">→</span><span>Ver <mark>Nexus Konta</mark> / <mark>Nexus Factum</mark> en una demo</span></li>
+        <li><span class="from">demo.proveedores.seidorapps.ai</span><span class="arrow">→</span><span>demo.<mark>factum</mark>.seidorapps.ai</span></li>
+      </ul>
+      <p class="why"><b>Motivo:</b> es la sección donde cada producto se presenta, así que el nombre va como título y la descripción ("Portal de Rendiciones") queda como apoyo. Los botones de demo piden el producto por su nombre para que el lead llegue ya identificado. <b>Por decidir:</b> el subdominio de demo, igual que en la observación 4.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">8</span><h2>Inteligencia artificial</h2><span class="where">#ia · bajada y métrica "27 operaciones"</span></header>
+      <ul class="changes">
+        <li><span class="from">El mismo motor que usan Rendiciones y Proveedores</span><span class="arrow">→</span><span>…que usan <mark>Nexus Konta y Nexus Factum</mark></span></li>
+        <li><span class="from">Integración Proveedores–SAP</span><span class="arrow">→</span><span>Integración <mark>Nexus Factum</mark>–SAP</span></li>
+      </ul>
+      <p class="why"><b>Motivo:</b> refuerza que la lectura con IA es una capacidad compartida de la suite. Se mantienen "Leer documento con IA" y "Lectura con IA" porque son funciones; la regla de no usar "IA" aplica a los nombres de producto, no a la descripción de funciones.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">9</span><h2>Hecho para empresas</h2><span class="where">#seguridad · tarjeta Auditoría</span></header>
+      <ul class="changes"><li><span class="from">…en Rendiciones, Proveedores y la administración</span><span class="arrow">→</span><span>…en <mark>Nexus Konta, Nexus Factum</mark> y la administración</span></li></ul>
+      <p class="why"><b>Motivo:</b> coherencia; cualquier mención de un producto usa su nombre comercial.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">10</span><h2>Formulario de demo</h2><span class="where">#demo · "¿Qué te interesa?"</span></header>
+      <ul class="changes">
+        <li><span class="from">☐ Rendiciones</span><span class="arrow">→</span><span>☐ <mark>Nexus Konta</mark> (Rendiciones)</span></li>
+        <li><span class="from">☐ Proveedores</span><span class="arrow">→</span><span>☐ <mark>Nexus Factum</mark> (Proveedores)</span></li>
+      </ul>
+      <p class="why"><b>Motivo:</b> quien llena el formulario quizá aún no reconoce la marca nueva; el paréntesis evita que marque la opción equivocada. Los valores internos del formulario (<code>rend</code>, <code>prov</code>) no cambian, así que el CRM no se ve afectado.</p>
+    </article>
+
+    <article class="obs">
+      <header><span class="n">11</span><h2>Pie de página</h2><span class="where">Footer · logo y línea de productos</span></header>
+      <ul class="changes">
+        <li><span class="from">SEIDOR Apps</span><span class="arrow">→</span><span>SEIDOR <mark>Nexus</mark></span></li>
+        <li><span class="from">Rendiciones · Proveedores</span><span class="arrow">→</span><span><mark>Nexus Konta · Nexus Factum</mark></span></li>
+      </ul>
+      <p class="why"><b>Motivo:</b> cierra la página con la misma firma del header.</p>
+    </article>
+  </section>
+
+  <section class="open">
+    <h2>Fuera de la maqueta: pendientes para decidir</h2>
+    <ol>
+      <li><b>Dominio.</b> La web vive en <code>seidorapps.ai</code>. Definir si se mantiene, se agrega <code>seidornexus.ai</code> o se usa una ruta tipo <code>seidor.com/nexus</code>.</li>
+      <li><b>Subdominios de clientes</b> (observaciones 4 y 7). Cambiarlos afecta DNS, certificados y URLs que los clientes productivos ya usan; puede quedar solo para clientes nuevos.</li>
+      <li><b>Versión en inglés.</b> Los nombres funcionan igual en <code>/en</code>; falta aplicar los mismos cambios allí.</li>
+      <li><b>Marca y dominios.</b> Buscar "Seidor Nexus", "Konta" y "Factum" en INDECOPI (clases 9 y 42) y revisar dominios libres antes de publicar.</li>
+      <li><b>Producto.</b> Los nombres también tienen que llegar a los portales (login, correos, plantillas); hoy la web es solo la cara comercial.</li>
+    </ol>
+  </section>
+
+</div>
+</body>
+</html>
